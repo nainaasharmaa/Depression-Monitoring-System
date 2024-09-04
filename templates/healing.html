@@ -1,0 +1,85 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healing</title>
+    <link rel="stylesheet" href="{% static 'css/healing.css' %}">
+</head>
+<body>
+    <div class="main">
+        <nav> 
+            <div class="navbar">
+                <img src="{% static 'Images/Logo.png' %}" class="logo">
+                <ul>
+                    <li><a href="{% url 'index' %}">HOME</a></li>
+                    <li><a href="{% url 'survey' %}">DETECTION</a></li>
+                    <li><a href="{% url 'healing' %}">HEALING</a></li>
+                    <li><a href="{% url 'about' %}">ABOUT US</a></li>
+                </ul>
+                <img src="{% static 'Images/Profile pic.png' %}" class="user-bitmoji" onclick="toggleMenu()">
+                <div class="sub-menu-wrap" id="subMenu">
+                    <div class="sub-menu">
+                        <hr>
+                        <a href="{% url 'login' %}" class="sub-menu-link">
+                            <p>Login</p>
+                            <span></span>
+                        </a>
+                        <a href="#" class="sub-menu-link">
+                            <p>My Profile</p>
+                            <span></span>
+                        </a>
+                        <a href="#" class="sub-menu-link">
+                            <p>Setting & Privacy</p>
+                            <span></span>
+                        </a>
+                        <a href="{% url 'contactus' %}" class="sub-menu-link">
+                            <p>Help & Support</p>
+                            <span></span>
+                        </a> 
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="new">
+            <div class="one">
+                <img style="height:300px; width:300px;" src="{% static 'Images/expert1.png' %}">
+                <ol style="list-style:none;">
+                    <li><b>Dr Maira Ahmed</b></li>
+                    <li>Senior Consultant</li>
+                    <li>Experience: 10+</li>
+                </ol>
+            </div>
+            <div class="two">
+                <img style="height:300px; width:300px; align-items:center;" src="{% static 'Images/expert2.png' %}">
+                <ol style="list-style:none;">
+                    <li><b>Dr Danish Ahmed</b></li>
+                    <li>Neurologist</li>
+                    <li>Experience: 10+</li>
+                </ol>
+            </div>
+            <div class="three">
+                <img style="height:300px; width:300px; align-items:center" src="{% static 'Images/expert3.png' %}">
+                <ol style="list-style:none;">
+                    <li><b>Dr Shastri</b></li>
+                    <li>Major Consultant</li>
+                    <li>Experience: 10+</li>
+                </ol>
+            </div>
+        </div>
+        <div class="buttons">
+            <li style="list-style:none;" class="first">
+                <button type="contact me" class="new">Contact me</button>
+            </li>
+            <li style="list-style:none;" class="second">
+                <button type="contact me" class="new">Contact me</button>
+            </li>
+            <li style="list-style:none;" class="third">
+                <button type="contact me" class="new">Contact me</button>
+            </li>
+        </div>
+    </div>
+    <script src="{% static 'script.js' %}"></script>
+</body>
+</html>

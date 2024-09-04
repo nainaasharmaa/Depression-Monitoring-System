@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About Us</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/about.css' %}">
+</head>
+<body>
+    <div class="section">
+        <nav> 
+            <div class="navbar">
+                <img src="{% static 'Images/Logo.png' %}" class="logo">
+                <ul>
+                    <li><a href="{% url 'index' %}">HOME</a></li>
+                    <li><a href="{% url 'survey' %}">DETECTION</a></li>
+                    <li><a href="{% url 'healing' %}">HEALING</a></li>
+                    <li><a href="{% url 'about' %}">ABOUT US</a></li>
+                </ul>
+                <img src="{% static 'Images/Profile pic.png' %}" class="user-bitmoji" onclick="toggleMenu()">
+                <div class="sub-menu-wrap" id="subMenu">
+                    <div class="sub-menu">
+                        <hr>
+                        <a href="{% url 'login' %}" class="sub-menu-link">
+                            <p>Login</p>
+                            <span></span>
+                        </a>
+                        <a href="#" class="sub-menu-link">
+                            <p>My Profile</p>
+                            <span></span>
+                        </a>
+                        <a href="#" class="sub-menu-link">
+                            <p>Setting & Privacy</p>
+                            <span></span>
+                        </a>
+                        <a href="{% url 'contactus' %}" class="sub-menu-link">
+                            <p>Help & Support</p>
+                            <span></span>
+                        </a> 
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="content-section">
+                <div class="title">
+                    <h1>About Us</h1>
+                </div>
+                <div class="content">
+                    <h3>HealingNeuro</h3>
+                    <p>Depression is a widespread issue that impacts people globally, regardless of their background or financial status. According to the WHO, depression stands as the leading mental health problem, often hindering individuals from engaging in daily activities and work. Sadly, many remain unaware of their deteriorating mental health. In response, we've developed the Depression Monitoring System (DMS), offering users a confidential space to assess their depression levels by answering simple questions and connecting with experienced consultants for personalized support. Through compassionate guidance and evidence-based approaches, we aim to assist individuals in navigating their journey toward improved mental well-being.</p>
+                    <div class="button">
+                        <a href="">Read More</a>
+                    </div>
+                </div>
+            </div>    
+        </div>
+        <div class="image-section">
+            <img src="{% static 'Images/about page.jpg' %}">
+        </div>
+    </div>
+    <div class="social">
+        <a href="#"><img src="{% static 'Images/Instagram.jpg' %}"></a>
+        <a href="#"><img src="{% static 'Images/Facebook.jpg' %}"></a>
+        <a href="#"><img src="{% static 'Images/Twitter.png' %}"></a>
+    </div>
+
+    <script src="{% static 'script.js' %}"></script>
+</body>
+</html>
